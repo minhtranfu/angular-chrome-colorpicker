@@ -1,0 +1,26 @@
+{
+  "name": "angular-chrome-colorpicker",
+  "version": "1.0.0",
+  "description": "Color picker like Chrome's for angular with no dependency",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minhtranfu/angular-chrome-colorpicker.git"
+  },
+  "keywords": [
+    "angular",
+    "colorpicker",
+    "chrome",
+    "color",
+    "picker"
+  ],
+  "author": "Trần Công Minh - minhtranfu@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minhtranfu/angular-chrome-colorpicker/issues"
+  },
+  "homepage": "https://github.com/minhtranfu/angular-chrome-colorpicker#readme"
+}

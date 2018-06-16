@@ -161,7 +161,7 @@ var colorPicker = angular.module('colorpicker', [])
 colorPicker.directive('colorPicker', ['$document', '$compile', 'ColorHelper', function ($document, $compile, ColorHelper) {
         return {
             restrict: 'A',
-            scope: {colorPickerModel: '=', colorPickerOutputFormat: '='},
+            scope: {colorPickerModel: '=', colorPickerOutputFormat: '=', colorPickerChange: '='},
             controller: ['$scope', function ($scope) {
                     $scope.show = false;
                     $scope.sAndLMax = {};
@@ -276,6 +276,11 @@ colorPicker.directive('colorPicker', ['$document', '$compile', 'ColorHelper', fu
                         $scope.hueSlider.left = ($scope.hsva.h) * $scope.hueMax.x - 8 + 'px';
                         $scope.alphaSlider.left = $scope.hsva.a * $scope.alphaMax.x - 8 + 'px';
                         $scope.alphaInvalidClass = '';
+
+                        // callback if exist
+                        if ($scope.colorPickerChange) {
+                            $scope.colorPickerChange($scope.outputColor);
+                        }
                     };
 
                     $scope.setColorFromHex = function (string) {
